@@ -11,6 +11,13 @@ export default createGlobalStyle`
     }
     body{
         color: white;
+        background: rgb(0, 24, 69);
+        background: radial-gradient(
+            circle,
+            rgba(0, 24, 69, 1) 0%,
+            rgba(2, 62, 125, 1) 100%
+        );
+        background-repeat: no-repeat;
        
     }
     body::-webkit-scrollbar {

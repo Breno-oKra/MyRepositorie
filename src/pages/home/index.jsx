@@ -24,7 +24,7 @@ import {
 } from "@phosphor-icons/react";
 import Discover from "../../assets/discover.png";
 import { useEffect, useRef } from "react";
-import Eu from "../../assets/eu.png"
+import Eu from "../../assets/eu.png";
 function App() {
   const section = useRef(null);
   useEffect(() => {
@@ -35,7 +35,6 @@ function App() {
         e.forEach((el) => {
           if (el.intersectionRatio > 0.7 && el.isIntersecting) {
             document.querySelector(`.${el.target.id}`).classList.add("kong");
-            
           } else {
             document.querySelector(`.${el.target.id}`).classList.remove("kong");
           }
@@ -65,15 +64,36 @@ function App() {
                 </p>
               </div>
               <div>
-                <GithubLogo weight="fill" />
-                <LinkedinLogo weight="fill" />
-                <InstagramLogo weight="fill" />
-                <WhatsappLogo weight="fill" />
-                <FacebookLogo weight="fill" />
+                <a href="https://github.com/Breno-oKra" target="_blank">
+                  <GithubLogo weight="fill" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/breno-olivera-a3563a196/"
+                  target="_blank"
+                >
+                  {" "}
+                  <LinkedinLogo weight="fill" />
+                </a>
+                <a
+                  href="https://www.instagram.com/oliveirakra/"
+                  target="_blank"
+                >
+                  {" "}
+                  <InstagramLogo weight="fill" />
+                </a>
+                <a href=" https://wa.me/5561991750350" target="_blank">
+                  {" "}
+                  <WhatsappLogo weight="fill" />
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100009539993801"
+                  target="_blank"
+                >
+                  {" "}
+                  <FacebookLogo weight="fill" />
+                </a>
               </div>
             </div>
-
-
           </BoxAlignUser>
           <BoxNavigates>
             <div>
@@ -122,15 +142,13 @@ function App() {
                 alt=""
               />
               <div>
-                <h2>
-                  <a
-                    href="https://web-production-81cb.up.railway.app/"
-                    target="_blank"
-                  >
-                    Gallow of Death Online <ArrowUpRight />
-                  </a>{" "}
-                  <span></span>
-                </h2>
+                <a
+                  href="https://web-production-81cb.up.railway.app/"
+                  target="_blank"
+                >
+                  <span>Gallow of Death Online <ArrowUpRight /></span>
+                  <p>Criado: 13/02/2021</p>
+                </a>{" "}
                 <p>
                   Meu Primeiro Projeto estudando a fundo o uso so{" "}
                   <strong>Socket.io</strong> pela documentação, o projeto
@@ -152,7 +170,15 @@ function App() {
                 alt=""
               />
               <div>
-                <h2>ExplorerFood - Rocketseat</h2>
+                <a
+                  href="https://food-explorer-brenookra.netlify.app/"
+                  target="_blank"
+                >
+                    <span> ExplorerFood - Rocketseat <ArrowUpRight /></span>
+                  <p>Criado: 20/03/2024</p>
+                 
+                </a>
+             
                 <p>
                   Projeto Final do curso explorer, onde teriamos que construir
                   um site paracido com a mecanicas do ifood, contendo funções
@@ -174,8 +200,8 @@ function App() {
             </p>
             <h3>
               {" "}
-              <UsersThree color=" #c77dff" size={32} /> Projetos desenvolvidos em cursos
-              ou maratonas
+              <UsersThree color=" #c77dff" size={32} /> Projetos desenvolvidos
+              em cursos ou maratonas
             </h3>
             <div>
               <img
@@ -183,7 +209,7 @@ function App() {
                 alt=""
               />
               <div>
-                <h2>ExplorerFood - Rocketseat</h2>
+                <a>ExplorerFood - Rocketseat</a>
 
                 <p>
                   o explorer food tem o proposito de simular um ifood, simulando
@@ -307,10 +333,9 @@ function App() {
                 </div>
 
                 <p>
-                  formação em linguagem web full stack realizado no curso
-                  explorer da rocketseat, o curso tem como proposito te deixar
-                  preparado para o mercado de trabalho principais tecnologias
-                  aprendidas html, css, javascript,react, node, git, sqlite
+                  formação basica em linguagem web,o aprendizado inclui
+                  animações em paginas html com css, utilização de javascript e
+                  versionamento git chagando ate a consumir api do github
                 </p>
               </div>
             </div>

@@ -23,10 +23,10 @@ import {
   WhatsappLogo,
 } from "@phosphor-icons/react";
 import Discover from "../../assets/discover.png";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import Eu from "../../assets/eu.png";
 function App() {
-  const section = useRef(null);
+ 
   useEffect(() => {
     function scrollz() {
       const project = document.querySelectorAll(".sections");
@@ -227,7 +227,7 @@ function App() {
               </div>
             </div>
           </Projects>
-          <Skills id="skills" className="sections" ref={section}>
+          <Skills id="skills" className="sections">
             <h3>Habilidades Tanto do Frontend quanto em beckend</h3>
             <div>
               <div>

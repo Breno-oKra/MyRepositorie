@@ -39,6 +39,7 @@ export const ContainerUser = styled.div`
   gap: 10px;
   @media (max-width: 1600px) {
     padding-top: 80px;
+    width: 40%;
   }
   @media (max-width: 1150px) {
     width: 100%;
@@ -68,6 +69,7 @@ export const Boxs = styled.div`
   margin-bottom: 100px;
   @media (max-width: 1600px) {
     padding-top: 80px;
+    width: 60%;
   }
   @media (max-width: 1150px) {
     width: 100%;

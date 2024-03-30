@@ -15,13 +15,24 @@ export const Container = styled.div`
     }
   }
   &:hover {
-    >img {
+    > img {
       transform: translateX(-2px);
     }
   }
   img {
     width: 200px;
     transition: 400ms transform linear;
+  }
+  > p {
+
+    font-size: 14px;
+    color: #00f5d4a8;
+    width: 100px;
+    align-self: center;
+    text-align: center;
+    font-weight: bold;
+    line-height: 20px;
+    
   }
   > div {
     display: flex;
@@ -47,6 +58,7 @@ export const Container = styled.div`
     img {
       width: 150px;
     }
+    >
   }
   @media (max-width: 550px) {
     flex-direction: column;
@@ -75,7 +87,7 @@ export const HeaderTitle = styled.div`
         transition: 200ms transform linear;
       }
     }
-    p {
+    > p {
       margin-top: 2px;
       font-size: 11px;
       color: #00f5d4a8;
@@ -133,7 +145,6 @@ export const Tags = styled.div`
   }
 `;
 export const Experience = styled.div`
-
   display: flex;
   flex-direction: column;
   border-top: 1px solid #273654;
@@ -145,7 +156,6 @@ export const Experience = styled.div`
     color: #adb5bd;
   }
   div {
-
     display: flex;
     align-items: center;
     gap: 10px;

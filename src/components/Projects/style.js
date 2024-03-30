@@ -35,6 +35,7 @@ export const Container = styled.div`
         width:250px ;
     }
   }
+
   @media (max-width: 550px) {
     gap: 30px;
   }

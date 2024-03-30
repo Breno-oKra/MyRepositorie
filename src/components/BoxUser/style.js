@@ -11,7 +11,7 @@ export const Container = styled.div`
     gap: 20px;
 
     img {
-      width: 400px;
+      width: 350px;
       border-radius: 20px;
     }
     &.profileProject {
@@ -102,18 +102,13 @@ export const Infos = styled.div`
   }
   @media (max-width: 550px) {
     p {
-      font-size: 10px;
+      font-size: 12px;
     }
   }
-  @media (max-width: 210px) {
+  @media (max-width: 250px) {
     gap: 5px;
-
-    p {
-      font-size: 8px;
-      svg {
-        font-size: 12px;
-      }
-    }
+    flex-direction: column;
+    
   }
 `;
 export const BoxLinks = styled.div`
@@ -133,13 +128,13 @@ export const BoxLinks = styled.div`
   @media (max-width: 550px) {
     a {
       > svg {
-        font-size: 30px;
+        font-size: 28px;
       }
     }
   }
-  @media (max-width: 210px) {
+  @media (max-width: 280px) {
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 15px;
     a {
       > svg {
         font-size: 15px;

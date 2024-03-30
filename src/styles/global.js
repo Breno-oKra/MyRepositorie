@@ -6,19 +6,38 @@ export default createGlobalStyle`
         padding:0;
         box-sizing: border-box;    
     }
+    :root{
+        --text: #fff;
+        --subtitle:#dee2e6;
+        --description:#adb5bd;
+      
+        --info:#00f5d4;
+        --info_op:#00f5d4a8;
+
+        --links: #deaaff;
+        --highlights: #9b5de5;
+        --GRADIENTS-BAckground:  ${({ theme }) => theme.GRADIENTS_100_COLOR};
+        --GRADIENTS: ${({ theme }) => theme.GRADIENTS_100};
+    }
     html{
         scroll-behavior: smooth;
     }
+    html.light{
+        --text:#001845;
+        --subtitle:#023E7D;
+        --description:#024FA2;
+        --GRADIENTS-BAckground:  ${({ theme }) => theme.GRADIENTS_200_COLOR};
+        --GRADIENTS: ${({ theme }) => theme.GRADIENTS_200};
+        --links:#C05CFF;
+        --highlights:#B133FF;
+        --info:#F67D13;
+        --info_op:#023E7D
+    }
     body{
-        color: white;
-        background: rgb(0, 24, 69);
-        background: radial-gradient(
-            circle,
-            rgba(0, 24, 69, 1) 0%,
-            rgba(2, 62, 125, 1) 100%
-        );
-        background-repeat: no-repeat;
-       
+        color: var(--text);
+        background: var(--GRADIENTS-BAckground);
+        background:var(--GRADIENTS);
+        background-repeat: no-repeat;       
     }
     body::-webkit-scrollbar {
             width: 12px; 
@@ -37,7 +56,7 @@ export default createGlobalStyle`
         cursor: pointer;
         transition: filter 0.2s;
         text-decoration: none;
-        color: white;
+        color:var(--text);
     }
     body, input, button, textarea,select{
         font-family: 'Roboto', sans-serif;

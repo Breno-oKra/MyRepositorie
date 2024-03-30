@@ -95,11 +95,11 @@ export const AboutMe = styled.div`
     margin: 20px 0;
     font-family: "League Spartan", sans-serif;
     span {
-      color: #9b5de5;
+      color: var(--highlights);
     }
   }
   p {
-    color: #dee2e6;
+    color:var(--subtitle);
     font-size: 18px;
     letter-spacing: 2px;
   }
@@ -157,10 +157,10 @@ export const Skills = styled.div`
 
     div {
       padding: 20px;
-      background-color: #002855;
+      background-color:  ${({theme}) => theme.BLUE_200};
       border-radius: 20px;
       box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-      border: 2px solid #33415c;
+      border: 2px solid  ${({theme}) => theme.GRAY_300};
       img {
         width: 70px;
         height: 70px;

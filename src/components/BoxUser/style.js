@@ -55,21 +55,18 @@ export const Container = styled.div`
       img {
         width: 60%;
       }
-
     }
     @media (max-height: 500px) and (min-width: 950px) {
       gap: 10px;
       img {
         width: 40%;
       }
-   
     }
     @media (max-height: 400px) and (max-width: 950px) {
       gap: 10px;
       img {
         width: 20%;
       }
-    
     }
     @media (max-height: 300px) {
       gap: 5px;
@@ -97,7 +94,7 @@ export const Infos = styled.div`
     font-size: 14px;
     svg {
       font-size: 23px;
-      color: #9b5de5;
+      color: var(--highlights);
     }
   }
   @media (max-width: 550px) {
@@ -108,7 +105,6 @@ export const Infos = styled.div`
   @media (max-width: 250px) {
     gap: 5px;
     flex-direction: column;
-    
   }
 `;
 export const BoxLinks = styled.div`
@@ -122,7 +118,7 @@ export const BoxLinks = styled.div`
     }
     > svg:hover {
       transform: scale(1.2);
-      color: #9b5de5;
+      color: var(--highlights);
     }
   }
   @media (max-width: 550px) {
@@ -140,5 +136,47 @@ export const BoxLinks = styled.div`
         font-size: 15px;
       }
     }
+  }
+`;
+export const BoxSunMoon = styled.div`
+  display: flex;
+  gap: 5px;
+  width: 60px;
+  height: 20px;
+  border-radius: 40px;
+  background-color: gray;
+  align-items: center;
+  justify-content: start;
+  button {
+    width: 30px;
+    height: 30px;
+    img {
+      width: 100%;
+    }
+    transition: 300ms all linear;
+  }
+  &.boxSun {
+    justify-content: end;
+    .sun {
+      display: none;
+    }
+    .moon{
+      display: flex;
+    }
+    button{
+      transition: 1s all linear;
+      background-color: ${({theme}) => theme.BLUE_200};
+    }
+  }
+
+  .moon {
+    display: none;
+    
+  }
+
+  .bt-moon {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 100%;
   }
 `;

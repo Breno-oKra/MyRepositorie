@@ -15,6 +15,7 @@ import { BoxNavigation } from "../../components/BoxNavigation";
 import { Projects } from "../../components/Projects";
 import { CardCertifications } from "../../components/CardCertifications";
 import { Footer } from "../../components/Footer";
+
 function App() {
   const data = {
     Me: [
@@ -126,8 +127,10 @@ function App() {
     <Container>
       <SubContainer>
         <ContainerUser>
+        
           <BoxUser />
           <BoxNavigation />
+         
         </ContainerUser>
         <Boxs>
           <AboutMe id="aboutme" className="sections">

@@ -4,12 +4,12 @@ export const Container = styled.div`
   display: flex;
   align-items: start;
   gap: 10px;
-  background-color: #002855;
+  
   padding: 20px;
   border-radius: 10px;
   transition: 1s all linear;
   &:hover {
-    box-shadow: 0px 10px 15px -3px #9b5de559;
+   /*  box-shadow: 0px 10px 15px -3px #9b5de559; */
     > img {
       transform: translateX(-2px);
     }
@@ -26,7 +26,7 @@ export const Container = styled.div`
   > p {
 
     font-size: 14px;
-    color: #00f5d4a8;
+    color: var(--info_op);
     width: 100px;
     align-self: center;
     text-align: center;
@@ -40,7 +40,7 @@ export const Container = styled.div`
     gap: 15px;
     padding: 5px;
     > p {
-      color: #adb5bd;
+      color: var(--description);
       font-size: 14px;
     }
     @media (max-width: 1600px) {
@@ -58,7 +58,7 @@ export const Container = styled.div`
     img {
       width: 150px;
     }
-    >
+    
   }
   @media (max-width: 550px) {
     flex-direction: column;
@@ -72,7 +72,7 @@ export const Container = styled.div`
       z-index: 2;
     }
   }
-`;
+`
 export const HeaderTitle = styled.div`
   display: flex;
   justify-content: space-between;
@@ -81,7 +81,6 @@ export const HeaderTitle = styled.div`
     span {
       font-size: 18px;
       font-weight: bold;
-      color: #e9ecef;
       transition: 200ms all linear;
       svg {
         transition: 200ms transform linear;
@@ -90,7 +89,7 @@ export const HeaderTitle = styled.div`
     > p {
       margin-top: 2px;
       font-size: 11px;
-      color: #00f5d4a8;
+      color:var(--info_op);
     }
   }
   a:hover {
@@ -128,7 +127,7 @@ export const Tags = styled.div`
   flex-wrap: wrap;
   gap: 10px;
   p {
-    color: #9b5de5;
+    color: var(--highlights) ;
     font-size: 12px;
     text-transform: uppercase;
     font-weight: bold;
@@ -147,13 +146,13 @@ export const Tags = styled.div`
 export const Experience = styled.div`
   display: flex;
   flex-direction: column;
-  border-top: 1px solid #273654;
+  border-top: 1px solid  ${({theme}) => theme.GRAY_200};
   padding-top: 10px;
   gap: 10px;
   > span {
     font-size: 11px;
     font-weight: bold;
-    color: #adb5bd;
+    color: var(--description);
   }
   div {
     display: flex;

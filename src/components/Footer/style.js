@@ -10,7 +10,8 @@ export const Container = styled.div`
     font-family: "League Spartan", sans-serif;
     font-size: 18px;
     span {
-      color: #c77dff;
+      color: var(--highlights);
+      font-weight: bold;
     }
   }
   @media (max-width: 550px) {

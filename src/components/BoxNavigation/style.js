@@ -11,11 +11,10 @@ export const Container = styled.div`
   gap: 5px;
   a {
     width: 100%;
-    color: white;
     padding-left: 15px;
     font-weight: bold;
     font-size: 23px;
-    border-left: 2px solid #deaaff;
+    border-left: 2px solid var(--links);
     transition: 100ms all linear;
 
     @media (max-width: 1150px) {
@@ -23,11 +22,12 @@ export const Container = styled.div`
     }
   }
   a:hover {
-    color: #deaaff;
+    color:  var(--highlights);
+   
   }
   .kong {
-    color: #c77dff;
-    border-left: 10px solid #deaaff;
+    color:  var(--links);
+    border-left: 10px solid var(--links);
   }
 
   @media (max-width: 1600px) {
@@ -46,12 +46,12 @@ export const Container = styled.div`
     padding: 0;
     justify-content: center;
     a {
-      border-left: 2px solid #deaaff;
+      border-left: 2px solid  var(--links);
       font-size: 18px;
     }
     .kong {
-      color: #c77dff;
-      border-left: 15px solid #deaaff;
+      color:  var(--links);
+      border-left: 15px solid  var(--links);
     }
   }
   @media (max-width: 650px) {
@@ -65,11 +65,11 @@ export const Container = styled.div`
     padding-inline: 30px;
     padding-top: 10px;
     align-items: end;
-    background-color: #00285542;
+    background-color: ${({ theme }) => theme. BLUE_200_OP};
     backdrop-filter: blur(40px);
     a {
       border-left: none;
-      border-bottom: 2px solid #deaaff;
+      border-bottom: 2px solid  var(--links);
       font-size: 16px;
       text-align: center;
       padding-bottom: 5px;
@@ -77,7 +77,7 @@ export const Container = styled.div`
     .kong {
       color: #c77dff;
       border-left: none;
-      border-bottom: 15px solid #deaaff;
+      border-bottom: 15px solid  var(--links);
     }
   }
   @media (max-width: 550px) {

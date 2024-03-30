@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   gap: 20px;
   align-items: start;
-  border-bottom: 1px solid #40598c68;
+  border-bottom: 1px solid ${({ theme }) => theme.GRAY_100};
   padding-bottom: 10px;
   > img {
     width: 60px;
@@ -16,16 +16,10 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
-    span {
-      color: #00f5d4;
-      font-size: 12px;
-      padding: 5px;
-      border-radius: 10px;
-    }
 
     > p {
       font-size: 13px;
-      color: #adb5bd;
+      color: var(--description);
       letter-spacing: 1px;
     }
     @media (max-width: 550px) {
@@ -49,8 +43,15 @@ export const HeaderInfos = styled.div`
   align-items: center;
   gap: 30px;
   font-size: 12px;
-  p {
-    color: #e9ecef;
+  P{
+    font-weight: bold;
+  }
+  span {
+    color:var(--info);
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: bold;
   }
   @media (max-width: 550px) {
     flex-wrap: wrap;

@@ -37,7 +37,9 @@ export default createGlobalStyle`
         color: var(--text);
         background: var(--GRADIENTS-BAckground);
         background:var(--GRADIENTS);
-        background-repeat: no-repeat;       
+        background-repeat: no-repeat;  
+        
+        overflow-x: hidden;
     }
     body::-webkit-scrollbar {
             width: 12px; 
@@ -57,6 +59,7 @@ export default createGlobalStyle`
         transition: filter 0.2s;
         text-decoration: none;
         color:var(--text);
+        background: none;
     }
     body, input, button, textarea,select{
         font-family: 'Roboto', sans-serif;

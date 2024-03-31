@@ -3,14 +3,30 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   min-height: 100vh;
-
+  
+  .cursor{
+    width: 30px;
+    height: 30px;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    background-color:rgba(2, 62, 125, 1)  ;
+    border: 3px solid rgba(0, 24, 69,0.3) ;
+    transition: all 100ms ease-out ;
+    z-index: 0;
+    box-shadow: 0px 10px 255px 50px #0DE4F094;
+  }
+  .cursorview{
+    visibility: hidden;
+    display: none;
+  }
   /* background-color: #001845; */
 `;
 export const SubContainer = styled.div`
   display: flex;
   width: 100%;
   padding-inline: 250px;
-
+  z-index: 5;
   @media (max-width: ${({ theme }) => theme.EXTRA_LARGE}) {
     padding-inline: 100px;
   }
@@ -76,7 +92,7 @@ export const ContainerUser = styled.div`
 export const Boxs = styled.div`
   width: 50%;
   min-height: 100vh;
-
+  z-index: 5;
   display: flex;
   flex-direction: column;
   gap: 15vh;
@@ -103,7 +119,11 @@ export const Boxs = styled.div`
 `;
 export const AboutMe = styled.div`
   width: 100%;
+  padding: 5px;
   padding-top: 150px;
+  backdrop-filter: blur(50px);
+  border-radius: 20px;
+  
   h2 {
     font-size: 46px;
     margin: 20px 0;

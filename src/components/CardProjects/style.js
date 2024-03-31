@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
 
+  
+  backdrop-filter: blur(50px);
   gap: 10px;
 
   padding: 20px;

@@ -1,17 +1,18 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-
+ 
   display: flex;
   flex-direction: column;
   gap: 20px;
   > div {
-
+    backdrop-filter: blur(50px);
+  border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-
+    padding: 10px;
     img {
       width: 350px;
       border-radius: 20px;
@@ -27,7 +28,11 @@ export const Container = styled.div`
       }
 
     }
-
+    div:nth-child(4){
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
     @media (max-width: ${({ theme }) => theme.EXTRA_LARGE}) {
       gap: 20px;
       img {

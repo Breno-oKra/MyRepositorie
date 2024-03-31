@@ -22,7 +22,7 @@ export const Container = styled.div`
       color: var(--description);
       letter-spacing: 1px;
     }
-    @media (max-width: 550px) {
+    @media (max-width:  ${({ theme }) => theme.SMALL} ) {
       gap: 5px;
 
       span {
@@ -33,7 +33,7 @@ export const Container = styled.div`
       }
     }
   }
-  @media (max-width: 210px) {
+  @media (max-width:  ${({ theme }) => theme.EXTRA_SMALL} ) {
     flex-direction: column;
   }
 `;
@@ -53,7 +53,7 @@ export const HeaderInfos = styled.div`
     border-radius: 10px;
     font-weight: bold;
   }
-  @media (max-width: 550px) {
+  @media (max-width:  ${({ theme }) => theme.SMALL} ) {
     flex-wrap: wrap;
     gap: 0;
     justify-content: space-between;

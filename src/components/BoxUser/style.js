@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+
   display: flex;
   flex-direction: column;
   gap: 20px;
   > div {
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,36 +15,40 @@ export const Container = styled.div`
     img {
       width: 350px;
       border-radius: 20px;
+      transition:500ms all linear;
     }
     &.profileProject {
       height: 100%;
       padding-top: 15px;
-      align-items: start;
+      align-items: center;
+      padding-right: 40px;
       img {
         width: 70%;
       }
+
     }
-    @media (max-width: 1600px) {
+
+    @media (max-width: ${({ theme }) => theme.EXTRA_LARGE}) {
       gap: 20px;
       img {
         width: 100%;
       }
     }
-    @media (max-width: 1250px) {
+    @media (max-width: ${({ theme }) => theme.LARGE}) {
       img {
-        width: 70%;
+        width: 50%;
       }
       &.profileProject {
-        align-items: center;
+        padding-right: 0px;
         img {
           width: 60%;
         }
       }
     }
-
-    @media (max-width: 550px) {
+  
+    @media (max-width: ${({ theme }) => theme.SMALL}) {
       img {
-        width: 80%;
+        width: 70%;
       }
       &.profileProject {
         img {
@@ -50,16 +56,11 @@ export const Container = styled.div`
         }
       }
     }
-    @media (max-height: 500px) {
+
+    @media (max-height: 500px) and (max-width: ${({ theme }) => theme.LARGE}) {
       gap: 10px;
       img {
-        width: 60%;
-      }
-    }
-    @media (max-height: 500px) and (min-width: 950px) {
-      gap: 10px;
-      img {
-        width: 40%;
+        width: 30%;
       }
     }
     @media (max-height: 400px) and (max-width: 950px) {
@@ -71,17 +72,25 @@ export const Container = styled.div`
     @media (max-height: 300px) {
       gap: 5px;
     }
-    @media (max-width: 210px) {
+    @media (max-width: ${({ theme }) => theme.EXTRA_SMALL}) {
+      padding-top: 10px;
       img {
         width: 50%;
       }
     }
   }
-  @media (max-width: 1150px) {
+  @media (max-width: ${({ theme }) => theme.LARGE}) {
     width: 100%;
     height: 100%;
     align-items: center;
     justify-content: center;
+  }
+  @media (max-height: ${({ theme }) => theme.EXTRA_SMALL}) {
+    padding-top: 10px;
+    height: auto;
+
+    }
+
   }
 `;
 export const Infos = styled.div`
@@ -97,12 +106,12 @@ export const Infos = styled.div`
       color: var(--highlights);
     }
   }
-  @media (max-width: 550px) {
+  @media (max-width: ${({ theme }) => theme.SMALL} ) {
     p {
       font-size: 12px;
     }
   }
-  @media (max-width: 250px) {
+  @media (max-width: ${({ theme }) => theme.EXTRA_SMALL} ) {
     gap: 5px;
     flex-direction: column;
   }
@@ -121,14 +130,14 @@ export const BoxLinks = styled.div`
       color: var(--highlights);
     }
   }
-  @media (max-width: 550px) {
+  @media (max-width:${({ theme }) => theme.SMALL} ) {
     a {
       > svg {
         font-size: 28px;
       }
     }
   }
-  @media (max-width: 280px) {
+  @media (max-width:${({ theme }) => theme.EXTRA_SMALL} ) {
     flex-wrap: wrap;
     gap: 15px;
     a {
@@ -139,44 +148,55 @@ export const BoxLinks = styled.div`
   }
 `;
 export const BoxSunMoon = styled.div`
+
   display: flex;
   gap: 5px;
-  width: 60px;
+  width: 50px;
   height: 20px;
   border-radius: 40px;
   background-color: gray;
   align-items: center;
   justify-content: start;
   button {
-    width: 30px;
-    height: 30px;
+    width: 60%;
+    height: 150%;
     img {
       width: 100%;
     }
-    transition: 300ms all linear;
+    transition: 500ms transform linear;
   }
   &.boxSun {
-    justify-content: end;
     .sun {
       display: none;
     }
-    .moon{
+    .moon {
       display: flex;
     }
-    button{
-      transition: 1s all linear;
-      background-color: ${({theme}) => theme.BLUE_200};
+    button {
+      background-color: ${({ theme }) => theme.BLUE_200};
+      transform: translateX(20px);
     }
   }
 
   .moon {
     display: none;
-    
   }
 
   .bt-moon {
     background-color: #fff;
     padding: 5px;
     border-radius: 100%;
+  }
+  @media (max-width: ${({ theme }) => theme.EXTRA_SMALL}) {
+    width: 30px;
+    height: 15px;
+    .bt-moon{
+      padding: 2px;
+    }
+    &.boxSun{
+      button{
+        transform: translateX(15px);
+      }
+    }
   }
 `;

@@ -14,11 +14,11 @@ export const Container = styled.div`
       font-weight: bold;
     }
   }
-  @media (max-width: 550px) {
+  @media (max-width: ${({ theme }) => theme.SMALL}) {
     padding-bottom: 80px;
     padding-top: 0;
   }
-  @media (max-width: 210px) {
+  @media (max-width: ${({ theme }) => theme.EXTRA_SMALL}) {
     p{
         font-size: 12px;
     }

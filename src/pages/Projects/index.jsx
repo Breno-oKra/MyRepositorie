@@ -5,7 +5,7 @@ import { BoxUser } from "../../components/BoxUser";
 import { Projects } from "../../components/Projects";
 
 import { Footer } from "../../components/Footer";
-function App() {
+export function Project() {
   const data = {
     Me: [
       {
@@ -85,4 +85,3 @@ function App() {
   );
 }
 
-export default App;

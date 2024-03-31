@@ -17,7 +17,7 @@ export const Container = styled.div`
     border-left: 2px solid var(--links);
     transition: 100ms all linear;
 
-    @media (max-width: 1150px) {
+    @media (max-width: ${({ theme }) => theme.LARGE}) {
       padding-left: 5px;
     }
   }
@@ -30,14 +30,15 @@ export const Container = styled.div`
     border-left: 10px solid var(--links);
   }
 
-  @media (max-width: 1600px) {
+  @media (max-width:${({ theme }) => theme.EXTRA_LARGE}) {
     gap: 2px;
     justify-content: space-evenly;
+
     a {
       font-size: 17px;
     }
   }
-  @media (max-width: 1150px) {
+  @media (max-width:${({ theme }) => theme.LARGE}) {
     position: fixed;
     top: 0;
     left: 0;
@@ -50,11 +51,11 @@ export const Container = styled.div`
       font-size: 18px;
     }
     .kong {
-      color:  var(--links);
+   
       border-left: 15px solid  var(--links);
     }
   }
-  @media (max-width: 650px) {
+  @media (max-width:${({ theme }) => theme.MEDIUM}) {
     top: initial;
     bottom: 0;
     width: 100%;
@@ -67,6 +68,7 @@ export const Container = styled.div`
     align-items: end;
     background-color: ${({ theme }) => theme. BLUE_200_OP};
     backdrop-filter: blur(40px);
+
     a {
       border-left: none;
       border-bottom: 2px solid  var(--links);
@@ -75,19 +77,21 @@ export const Container = styled.div`
       padding-bottom: 5px;
     }
     .kong {
-      color: #c77dff;
+   
       border-left: none;
       border-bottom: 15px solid  var(--links);
     }
   }
-  @media (max-width: 550px) {
+  @media (max-width:${({ theme }) => theme.SMALL}) {
+
     padding-inline: 10px;
     a {
       font-size: 14px;
       padding-bottom: 20px;
     }
   }
-  @media (max-width: 210px) {
+  @media (max-width:${({ theme }) => theme.EXTRA_SMALL} ) {
+  
     a {
       font-size: 8px;
       padding-bottom: 15px;

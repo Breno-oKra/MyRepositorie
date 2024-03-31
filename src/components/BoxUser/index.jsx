@@ -9,9 +9,9 @@ import {
   WhatsappLogo,
 } from "@phosphor-icons/react";
 import Eu from "../../assets/eu.png";
-import Sun from "../../assets/sun.svg"
-import Moon from "../../assets/moon.svg"
-export function BoxUser({profileProject}) {
+import Sun from "../../assets/sun.svg";
+import Moon from "../../assets/moon.svg";
+export function BoxUser({ profileProject }) {
   return (
     <Container>
       <div className={profileProject && "profileProject"}>
@@ -53,17 +53,21 @@ export function BoxUser({profileProject}) {
             <FacebookLogo weight="fill" />
           </a>
         </BoxLinks>
-        <BoxSunMoon id="box" className="box-sun">
-            <button id="btn" type="button" onClick={() => {
-                document.querySelector("#box").classList.toggle("boxSun")
-                document.documentElement.classList.toggle('light')
 
-            }}  className="bt-moon">
+        <BoxSunMoon id="box" className="box-sun">
+          <button
+            id="btn"
+            type="button"
+            onClick={() => {
+              document.querySelector("#box").classList.toggle("boxSun");
+              document.documentElement.classList.toggle("light");
+            }}
+            className="bt-moon"
+          >
             <img className="moon" src={Moon} alt="" />
             <img className="sun" src={Sun} alt="" />
-            </button>
-          
-          </BoxSunMoon>
+          </button>
+        </BoxSunMoon>
       </div>
     </Container>
   );

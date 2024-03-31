@@ -19,12 +19,12 @@ export const Container = styled.div`
         font-size: 32px;
     }
   }
-  > p {
+  > a {
     font-size: 14px;
     transition: 400ms transform linear;
     font-weight: bold;
   }
-  > p:hover {
+  > a:hover {
     text-decoration: underline;
     svg {
       transform: translateY(-3px);
@@ -36,14 +36,14 @@ export const Container = styled.div`
     }
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: ${({ theme }) => theme.SMALL}) {
     gap: 30px;
   }
-  @media (max-width: 210px) {
+  @media (max-width: ${({ theme }) => theme.EXTRA_SMALL}) {
     h3 {
       font-size: 12px;
     }
-    > p {
+    > a {
       font-size: 10px;
     }
     > div {

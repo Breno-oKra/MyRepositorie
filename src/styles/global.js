@@ -63,10 +63,5 @@ export default createGlobalStyle`
         font-size: 16px;
         outline: none;
         border: none;
-    }
-    button:hover, a:hover{
-        transition: brightness(0.9);
-    }
-   
-  
+    }  
 `;

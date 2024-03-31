@@ -35,7 +35,7 @@ export const ContainerUser = styled.div`
   padding: 10px;
   display: flex;
   padding-top: 150px;
-
+  
   gap: 10px;
   @media (max-width: 1600px) {
     padding-top: 80px;
@@ -54,6 +54,11 @@ export const ContainerUser = styled.div`
     overflow: hidden;
     padding-inline: 0px;
   }
+  @media (max-height: 425px) and (min-width:${({theme}) => theme.LARGE}) {
+    height: 100vh;
+    padding-top: 10px;
+    overflow-y: scroll;
+  }
 `;
 
 export const Boxs = styled.div`
@@ -71,7 +76,6 @@ export const Boxs = styled.div`
   }
   @media (max-width: 1150px) {
     width: 100%;
-    padding-left: 110px;
   }
   @media (max-width: 650px) {
     padding-inline: 10px;

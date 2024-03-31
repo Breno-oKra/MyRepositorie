@@ -1,4 +1,4 @@
-import { Container, Experience, HeaderTitle, Tags } from "./style";
+import { BoxDescriptions, Container, Experience, HeaderTitle, ImageBox, Tags } from "./style";
 import { ArrowUpRight } from "@phosphor-icons/react";
 
 export function CardProjects({
@@ -17,9 +17,12 @@ export function CardProjects({
   return (
     <Container>
       {projectsPage && <p>{created}</p>}
+      <ImageBox>
+        <img src={image} alt="" />
+        <div className="out"></div>
+      </ImageBox>
 
-      <img src={image} alt="" />
-      <div>
+      <BoxDescriptions>
         <HeaderTitle>
           <a href={link} target="_blank">
             <span>
@@ -36,7 +39,8 @@ export function CardProjects({
             <p key={index}>{item}</p>
           ))}
         </Tags>
-        {projectsPage  && nameCurse && (
+
+        {projectsPage && nameCurse && (
           /*  <Experience>
             <span>desenvolvido atravez dos conhecimentos do curso</span>
             <div>
@@ -58,28 +62,19 @@ export function CardProjects({
             </div>
           </Experience> */
           <Experience>
-           
             <span>desenvolvido atravez dos conhecimentos do curso</span>
             <div>
               <span>
-                <img
-                  src={imageCurse}
-                  alt=""
-                />{" "}
-                {nameCurse}
+                <img src={imageCurse} alt="" /> {nameCurse}
               </span>
               {"⟶"}
               <span>
-                <img
-                  src={imageCertificate}
-                  alt=""
-                />{" "}
-                certificado
+                <img src={imageCertificate} alt="" /> certificado
               </span>
             </div>
           </Experience>
         )}
-      </div>
+      </BoxDescriptions>
     </Container>
   );
 }

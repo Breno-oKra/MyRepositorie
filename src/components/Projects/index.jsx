@@ -1,9 +1,8 @@
+import { Link } from "react-router-dom";
 import { CardProjects } from "../CardProjects";
 import { Container } from "./style";
 import { ArrowUpRight, User, UsersThree } from "@phosphor-icons/react";
 export function Projects({ isProject, data }) {
-  console.log(data["Me"]);
-
   return (
     <Container id="projects" className={`sections ${isProject && "isProject"}`}>
       <h3>
@@ -40,9 +39,9 @@ export function Projects({ isProject, data }) {
         )
       )}
       {!isProject && (
-        <p>
-          Ver Todos os Projetos <ArrowUpRight />
-        </p>
+        <Link to="/projects">
+        Ver Todos os Projetos <ArrowUpRight />
+      </Link>
       )}
 
       <h3>
@@ -80,9 +79,9 @@ export function Projects({ isProject, data }) {
         )
       )}
       {!isProject && (
-        <p>
+        <Link to="/projects">
           Ver Todos os Projetos <ArrowUpRight />
-        </p>
+        </Link>
       )}
     </Container>
   );

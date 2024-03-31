@@ -11,20 +11,27 @@ export const SubContainer = styled.div`
   width: 100%;
   padding-inline: 250px;
 
-  @media (max-width: 1600px) {
+  @media (max-width: ${({ theme }) => theme.EXTRA_LARGE}) {
     padding-inline: 100px;
   }
-  @media (max-width: 1250px) {
+  @media (max-width: ${({ theme }) => theme.LARGE}) {
     padding-inline: 30px;
-  }
-  @media (max-width: 1150px) {
     flex-direction: column;
     align-items: center;
     padding-inline: 20px;
   }
-  @media (max-width: 210px) {
+/*   @media (max-width: ${({ theme }) => theme.MEDIUM}) {
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 20px;
+  } */
+  @media (max-width: ${({ theme }) => theme.EXTRA_SMALL}) {
     overflow: hidden;
     padding-inline: 5px;
+  }
+  @media (max-height: 425px) and (min-width:${({theme}) => theme.LARGE}) {
+   gap: 30px;
+
   }
 `;
 export const ContainerUser = styled.div`
@@ -37,24 +44,31 @@ export const ContainerUser = styled.div`
   padding-top: 150px;
 
   gap: 10px;
-  @media (max-width: 1600px) {
+  @media (max-width: ${({ theme }) => theme.EXTRA_LARGE}) {
     padding-top: 80px;
     width: 40%;
   }
-  @media (max-width: 1150px) {
+  @media (max-width: ${({ theme }) => theme.LARGE}) {
     width: 100%;
     position: relative;
     height: 100vh;
     flex-direction: column;
     padding-top: 0;
-    padding-left: 110px;
+    /* padding-left: 110px; */
   }
-  @media (max-width: 650px) {
+  @media (max-width: ${({ theme }) => theme.SMALL}) {
     padding-inline: 20px;
   }
-  @media (max-width: 210px) {
+  @media (max-width: ${({ theme }) => theme.EXTRA_SMALL}) {
     overflow: hidden;
     padding-inline: 0px;
+    height: auto;
+  }
+  @media (max-height: 425px) and (min-width:${({theme}) => theme.LARGE}) {
+    height: 100vh;
+    padding-top: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 `;
 
@@ -67,21 +81,21 @@ export const Boxs = styled.div`
   flex-direction: column;
   gap: 15vh;
   margin-bottom: 100px;
-  @media (max-width: 1600px) {
+  @media (max-width: ${({ theme }) => theme.EXTRA_LARGE}) {
     padding-top: 80px;
     width: 60%;
   }
-  @media (max-width: 1150px) {
+  @media (max-width: ${({ theme }) => theme.LARGE}) {
     width: 100%;
     padding-left: 110px;
   }
   @media (max-width: 650px) {
     padding-inline: 10px;
   }
-  @media (max-width: 550px) {
+  @media (max-width: ${({ theme }) => theme.SMALL}) {
     gap: 10vh;
   }
-  @media (max-width: 210px) {
+  @media (max-width: ${({ theme }) => theme.EXTRA_SMALL}) {
     gap: 20px;
     padding-top: 0px;
     padding-inline: 3px;
@@ -103,10 +117,10 @@ export const AboutMe = styled.div`
     font-size: 18px;
     letter-spacing: 2px;
   }
-  @media (max-width: 1600px) {
+  @media (max-width: ${({ theme }) => theme.EXTRA_LARGE}) {
     padding-top: 10px;
   }
-  @media (max-width: 550px) {
+  @media (max-width: ${({ theme }) => theme.SMALL}) {
     padding-top: 5px;
     h2 {
       font-size: 32px;
@@ -115,7 +129,7 @@ export const AboutMe = styled.div`
       font-size: 14px;
     }
   }
-  @media (max-width: 210px) {
+  @media (max-width: ${({ theme }) => theme.EXTRA_SMALL}) {
     padding-top: 5px;
     h2 {
       font-size: 20px;
@@ -167,10 +181,10 @@ export const Skills = styled.div`
         object-fit: cover;
       }
     }
-    @media (max-width: 1150px) {
+    @media (max-width: ${({ theme }) => theme.LARGE}) {
       justify-content: center;
     }
-    @media (max-width: 550px) {
+    @media (max-width: ${({ theme }) => theme.SMALL}) {
       gap: 10px;
       padding: 10px;
       justify-content: center;
@@ -181,7 +195,7 @@ export const Skills = styled.div`
         }
       }
     }
-    @media (max-width: 210px) {
+    @media (max-width: ${({ theme }) => theme.EXTRA_SMALL}) {
       padding: 0px;
       div {
         padding: 5px;
@@ -193,7 +207,7 @@ export const Skills = styled.div`
       }
     }
   }
-  @media (max-width: 210px) {
+  @media (max-width: ${({ theme }) => theme.EXTRA_SMALL}) {
       h3{
         font-size: 14px;
       }

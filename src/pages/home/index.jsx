@@ -16,7 +16,7 @@ import { Projects } from "../../components/Projects";
 import { CardCertifications } from "../../components/CardCertifications";
 import { Footer } from "../../components/Footer";
 
-function App() {
+export function Home() {
   const data = {
     Me: [
       {
@@ -271,5 +271,3 @@ function App() {
     </Container>
   );
 }
-
-export default App;

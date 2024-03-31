@@ -17,6 +17,15 @@ export const LIGHT_THEME =  {
     GRADIENTS_100_COLOR:"rgb(0, 24, 69)",
     GRADIENTS_100:"radial-gradient(circle,rgba(0, 24, 69, 1) 0%, rgba(2, 62, 125, 1) 100%);",
     GRADIENTS_200_COLOR:" rgb(247,248,248)",
-    GRADIENTS_200:"radial-gradient(circle, rgba(247,248,248,1) 0%, rgba(199,240,255,1) 100%)"
+    GRADIENTS_200:"radial-gradient(circle, rgba(247,248,248,1) 0%, rgba(199,240,255,1) 100%)",
+
+    EXTRA_LARGE: "1600px",
+    LARGE:"1250px",
+    MEDIUM_LG:"950px",
+    MEDIUM:"650px",
+    SMALL:"550px",
+    EXTRA_SMALL:"280px"
+
+    
  
 }

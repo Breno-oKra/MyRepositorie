@@ -10,8 +10,6 @@ export const Container = styled.div`
 
   padding: 20px;
   border-radius: 10px;
-  transition: 1s all linear;
-
   img {
     width: 200px;
     transition: 400ms transform linear;
@@ -75,7 +73,7 @@ export const HeaderTitle = styled.div`
     span {
       font-size: 18px;
       font-weight: bold;
-      transition: 200ms all linear;
+ 
       svg {
         transition: 200ms transform linear;
       }

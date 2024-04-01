@@ -4,30 +4,6 @@ export const Container = styled.div`
   width: 100%;
   min-height: 100vh;
 
-  .cursor {
-    width: 100px;
-    height: 100px;
-    display: block;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 0;
-    left: -50px;
-    background: #ffffffB3;
-    transition: all 100ms ease-out;
-    z-index: 0;
-    box-shadow: 0px 0px 255px 100px #ffffffB3;
-    background-color: red;
-  }
-  .cursor:{
-    animation: go-back 2s;
-  }
-  .cursorview {
-    visibility: hidden;
-    display: none;
-  }
- 
-
-  /* background-color: #001845; */
 `;
 export const SubContainer = styled.div`
   display: flex;

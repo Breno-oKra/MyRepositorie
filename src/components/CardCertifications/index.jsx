@@ -2,7 +2,7 @@ import { Container, HeaderInfos } from "./style";
 
 export function CardCertifications({image,title,status,statedOrEnd,description}) {
   return (
-    <Container>
+    <Container >
       <img
         src={image}
         alt=""

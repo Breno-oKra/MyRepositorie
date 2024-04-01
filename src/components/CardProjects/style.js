@@ -48,6 +48,27 @@ export const HeaderTitle = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  > div {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    > p {
+      display: flex;
+      font-size: 11px;
+      height: 20px;
+      font-weight: bold;
+      color: var(--text-mobile);
+      background-color: var(--background-mobile);
+      padding: 0px 5px;
+      border-radius: 5px;
+      align-items: center;
+      font-family: "League Spartan", sans-serif;
+      &.isMobile {
+        color: var(--text-mobile-active);
+        background-color: var(--background-mobile-active);
+      }
+    }
+  }
   a {
     span {
       font-size: 18px;
@@ -143,31 +164,31 @@ export const Experience = styled.div`
   }
 `;
 export const BoxDescriptions = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 5px;
-    > p {
-      color: var(--description);
-      font-size: 14px;
-      a{
-        padding-inline: 5px;
-        color: var(--links);
-        
-        text-decoration: underline;
-      }
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 5px;
+  > p {
+    color: var(--description);
+    font-size: 14px;
+    a {
+     
+      padding-inline: 5px;
+      font-weight: bold;
+      text-decoration: underline;
     }
+  }
 
-    @media (max-width: ${({ theme }) => theme.EXTRA_LARGE}) {
-      > p {
-        font-size: 14px;
-      }
+  @media (max-width: ${({ theme }) => theme.EXTRA_LARGE}) {
+    > p {
+      font-size: 14px;
     }
-    @media (max-width: ${({ theme }) => theme.SMALL}) {
-      > p {
-        font-size: 12px;
-      }
+  }
+  @media (max-width: ${({ theme }) => theme.SMALL}) {
+    > p {
+      font-size: 12px;
     }
+  }
 `;
 export const ImageBox = styled.div`
   display: flex;

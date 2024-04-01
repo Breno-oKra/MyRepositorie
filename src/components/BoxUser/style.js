@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
- 
   display: flex;
   flex-direction: column;
   gap: 20px;
   > div {
-
-  border-radius: 20px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,7 +14,7 @@ export const Container = styled.div`
     img {
       width: 350px;
       border-radius: 20px;
-      transition:500ms all linear;
+      transition: 500ms all linear;
     }
     &.profileProject {
       height: 100%;
@@ -26,14 +24,8 @@ export const Container = styled.div`
       img {
         width: 70%;
       }
-
     }
-    div:nth-child(4){
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
 
-    }
     @media (max-width: ${({ theme }) => theme.EXTRA_LARGE}) {
       gap: 20px;
       img {
@@ -51,7 +43,7 @@ export const Container = styled.div`
         }
       }
     }
-  
+
     @media (max-width: ${({ theme }) => theme.SMALL}) {
       img {
         width: 70%;
@@ -94,9 +86,6 @@ export const Container = styled.div`
   @media (max-height: ${({ theme }) => theme.EXTRA_SMALL}) {
     padding-top: 10px;
     height: auto;
-
-    }
-
   }
 `;
 export const Infos = styled.div`
@@ -112,12 +101,12 @@ export const Infos = styled.div`
       color: var(--highlights);
     }
   }
-  @media (max-width: ${({ theme }) => theme.SMALL} ) {
+  @media (max-width: ${({ theme }) => theme.SMALL}) {
     p {
       font-size: 12px;
     }
   }
-  @media (max-width: ${({ theme }) => theme.EXTRA_SMALL} ) {
+  @media (max-width: ${({ theme }) => theme.EXTRA_SMALL}) {
     gap: 5px;
     flex-direction: column;
   }
@@ -136,14 +125,14 @@ export const BoxLinks = styled.div`
       color: var(--highlights);
     }
   }
-  @media (max-width:${({ theme }) => theme.SMALL} ) {
+  @media (max-width: ${({ theme }) => theme.SMALL}) {
     a {
       > svg {
         font-size: 28px;
       }
     }
   }
-  @media (max-width:${({ theme }) => theme.EXTRA_SMALL} ) {
+  @media (max-width: ${({ theme }) => theme.EXTRA_SMALL}) {
     flex-wrap: wrap;
     gap: 15px;
     a {
@@ -154,7 +143,6 @@ export const BoxLinks = styled.div`
   }
 `;
 export const BoxSunMoon = styled.div`
-
   display: flex;
   gap: 5px;
   width: 50px;
@@ -196,11 +184,11 @@ export const BoxSunMoon = styled.div`
   @media (max-width: ${({ theme }) => theme.EXTRA_SMALL}) {
     width: 30px;
     height: 15px;
-    .bt-moon{
+    .bt-moon {
       padding: 2px;
     }
-    &.boxSun{
-      button{
+    &.boxSun {
+      button {
         transform: translateX(15px);
       }
     }

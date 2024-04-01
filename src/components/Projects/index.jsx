@@ -25,6 +25,7 @@ export function Projects({ isProject, data }) {
             imageCurse={item.imageCurse || false}
             imageCertificate={item.imageCertificate || false}
             links={item.links || false}
+            isMobile={item.isMobile}
           />
         ) : (
           <CardProjects
@@ -36,6 +37,7 @@ export function Projects({ isProject, data }) {
             github={item.github}
             description={item.description}
             tags={item.tags}
+            isMobile={item.isMobile}
           />
         )
       )}
@@ -66,6 +68,7 @@ export function Projects({ isProject, data }) {
             imageCurse={item.imageCurse || false}
             imageCertificate={item.imageCertificate || false}
             links={item.links || false}
+            isMobile={item.isMobile}
           />
         ) : (
           <CardProjects
@@ -77,6 +80,7 @@ export function Projects({ isProject, data }) {
             github={item.github}
             description={item.description}
             tags={item.tags}
+            isMobile={item.isMobile}
           />
         )
       )}
@@ -105,15 +109,12 @@ export function Projects({ isProject, data }) {
               imageCurse={item.imageCurse || false}
               imageCertificate={item.imageCertificate || false}
               links={item.links || false}
+              isMobile={item.isMobile}
             />
           ))}
         </>
       )}
-      {!isProject && (
-        <Link to="/projects">
-          Ver Todos os Projetos <ArrowUpRight />
-        </Link>
-      )}
+    
     </Container>
   );
 }

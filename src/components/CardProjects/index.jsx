@@ -6,15 +6,19 @@ import {
   ImageBox,
   Tags,
 } from "./style";
-import { ArrowUpRight,DeviceMobileSlash } from "@phosphor-icons/react";
+import { ArrowUpRight, DeviceMobileSlash,DeviceMobile } from "@phosphor-icons/react";
 
 function Organizer({ text, link }) {
- 
   let y = text.split(link.name);
-  return <p>{y[0]} <a href={link.link} target="_blank">{link.name}</a>{y[1]}</p>
- 
-  
-  
+  return (
+    <p>
+      {y[0]}{" "}
+      <a href={link.link} target="_blank">
+        {link.name}
+      </a>
+      {y[1]}
+    </p>
+  );
 }
 export function CardProjects({
   link,
@@ -29,8 +33,8 @@ export function CardProjects({
   nameCurse,
   imageCertificate,
   links,
+  isMobile,
 }) {
-
   return (
     <Container>
       {projectsPage && <p>{created}</p>}
@@ -41,16 +45,33 @@ export function CardProjects({
 
       <BoxDescriptions>
         <HeaderTitle>
-          <a href={link} target="_blank">
-            <span>
-              {title} <ArrowUpRight />
-            </span>
-            {!projectsPage && <p>{created}</p>}
+          <div>
+            <a href={link} target="_blank">
+              <span>
+                {title} <ArrowUpRight />
+              </span>
+              {!projectsPage && <p>{created}</p>}
+            </a>
+            {isMobile ? (
+              <p className="isMobile">
+                  mobile
+              </p>
+            ) : (
+              <p>
+                not-mobile
+              </p>
+            )}
+          </div>
+
+          <a href={github} target="_blank">
+            GIT HUB
           </a>
-          <p>oi</p>
-          <a href={github} target="_blank">GIT HUB</a>
         </HeaderTitle>
-        {links? <Organizer text={description} link={links} /> :  <p>{description}</p> }
+        {links ? (
+          <Organizer text={description} link={links} />
+        ) : (
+          <p>{description}</p>
+        )}
 
         <Tags>
           {tags?.map((item, index) => (

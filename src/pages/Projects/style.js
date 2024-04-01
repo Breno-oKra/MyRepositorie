@@ -68,7 +68,10 @@ export const Boxs = styled.div`
   flex-direction: column;
   display: flex;
   margin-bottom: 100px;
-
+  >a {
+    font-weight: bold;
+    font-size: 18px;
+  }
 
   padding-top: 100px;
   @media (max-width: 1600px) {

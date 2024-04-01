@@ -222,11 +222,16 @@ export const Skills = styled.div`
     }
     @media (max-width: ${({ theme }) => theme.SMALL}) {
       
-      gap: 20px;
-      padding: 10px;
+      gap: 5px;
       justify-content: center;
+
       div{
-        width: 150px;
+        width: 140px;
+        p{
+          flex: 1;
+          word-break: break-all;
+          font-size: 11px;
+        }
         
       }
     }

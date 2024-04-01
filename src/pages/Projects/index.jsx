@@ -5,6 +5,7 @@ import { BoxUser } from "../../components/BoxUser";
 import { Projects } from "../../components/Projects";
 
 import { Footer } from "../../components/Footer";
+import { Link } from "react-router-dom";
 export function Project() {
   const data = {
     Me: [
@@ -18,6 +19,7 @@ export function Project() {
         description:
           "Meu Primeiro Projeto estudando a fundo o uso so Socket.io pela documentação, o projeto trata-se de um jogo da forca online, onde quem acertar as letras ganha pontos e pode usar seus poderes para matar seu adversario",
         tags: ["HTML", "CSS", "JQUERY", "SOCKET.IO", "JavaScript", "nodejs"],
+        isMobile:false
       },
       {
         link: "https://food-explorer-brenookra.netlify.app/",
@@ -45,6 +47,7 @@ export function Project() {
         imageCertificate:
           "https://hotmart.s3.amazonaws.com/product_pictures/8d3a248f-323d-49e9-8a48-07e8f49f6c17/Explorer2.png",
         nameCurse: "Rocketseat",
+        isMobile:true
       },
       {
         link: "https://rocketmoviesokra.netlify.app",
@@ -73,6 +76,7 @@ export function Project() {
         imageCertificate:
           "https://hotmart.s3.amazonaws.com/product_pictures/8d3a248f-323d-49e9-8a48-07e8f49f6c17/Explorer2.png",
         nameCurse: "Rocketseat",
+        isMobile:true
       },
       {
         link: "https://breno-okra.github.io/focus-timer2.0-rocketseat-explorer/",
@@ -98,7 +102,9 @@ export function Project() {
         imageCertificate:
           "https://hotmart.s3.amazonaws.com/product_pictures/8d3a248f-323d-49e9-8a48-07e8f49f6c17/Explorer2.png",
         nameCurse: "Rocketseat",
+        isMobile:true
       },
+      
     ],
     MeOur: [
       {
@@ -123,6 +129,7 @@ export function Project() {
         imageCertificate:
           "https://hotmart.s3.amazonaws.com/product_pictures/8d3a248f-323d-49e9-8a48-07e8f49f6c17/Explorer2.png",
         nameCurse: "Rocketseat",
+        isMobile:true
       },
     ],
     Firts: [
@@ -147,6 +154,7 @@ export function Project() {
           name:"Discovery02",
             link:"https://github.com/Breno-oKra/Maratona-02?tab=readme-ov-file",
         },
+        isMobile:false
         
       },
       {
@@ -164,7 +172,7 @@ export function Project() {
           "JavaScript",
           "Jquery",
         ],
-       
+        isMobile:false
         
       },
     ],
@@ -177,6 +185,9 @@ export function Project() {
           <BoxUser profileProject />
         </ContainerUser>
         <Boxs>
+          <Link to={"/"}>
+          {"←"} voltar
+          </Link>
           <Projects isProject data={data} />
         </Boxs>
       </SubContainer>

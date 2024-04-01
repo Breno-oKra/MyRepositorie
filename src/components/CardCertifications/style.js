@@ -4,8 +4,11 @@ export const Container = styled.div`
   display: flex;
   gap: 20px;
   align-items: start;
-  border-bottom: 1px solid ${({ theme }) => theme.GRAY_100};
-  padding-bottom: 10px;
+  border: 1px solid var(--card_border);
+  background-color: var(--card_background);
+  padding: 15px;
+  border-radius: 5px;
+
   backdrop-filter: blur(150px);
   > img {
     width: 60px;

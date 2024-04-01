@@ -53,25 +53,21 @@ export function BoxUser({ profileProject }) {
             <FacebookLogo weight="fill" />
           </a>
         </BoxLinks>
-        <div>
-          <BoxSunMoon id="box" className="box-sun">
-            <button
-              id="btn"
-              type="button"
-              onClick={() => {
-                document.querySelector("#box").classList.toggle("boxSun");
-                document.documentElement.classList.toggle("light");
-              }}
-              className="bt-moon"
-            >
-              <img className="moon" src={Moon} alt="" />
-              <img className="sun" src={Sun} alt="" />
-            </button>
-          </BoxSunMoon>
-          <button onClick={() => document.querySelector(".cursor").classList.toggle("cursorview")}>
-            Chamar o sol
+
+        <BoxSunMoon id="box" className="box-sun">
+          <button
+            id="btn"
+            type="button"
+            onClick={() => {
+              document.querySelector("#box").classList.toggle("boxSun");
+              document.documentElement.classList.toggle("light");
+            }}
+            className="bt-moon"
+          >
+            <img className="moon" src={Moon} alt="" />
+            <img className="sun" src={Sun} alt="" />
           </button>
-        </div>
+        </BoxSunMoon>
       </div>
     </Container>
   );

@@ -6,7 +6,7 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 40px;
   padding-top: 50px;
- 
+
   > h3 {
     font-family: "League Spartan", sans-serif;
     font-size: 23px;
@@ -15,8 +15,8 @@ export const Container = styled.div`
     justify-content: start;
     gap: 10px;
     font-weight: 200;
-    svg{
-        font-size: 32px;
+    svg {
+      font-size: 32px;
     }
   }
   > a {
@@ -30,9 +30,12 @@ export const Container = styled.div`
       transform: translateY(-3px);
     }
   }
-  &.isProject >div {
-    > img{
-        width:250px ;
+  &.isProject {
+    gap: 70px;
+    > div {
+      > img {
+        width: 250px;
+      }
     }
   }
 

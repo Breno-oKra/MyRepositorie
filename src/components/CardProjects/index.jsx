@@ -1,6 +1,21 @@
-import { BoxDescriptions, Container, Experience, HeaderTitle, ImageBox, Tags } from "./style";
-import { ArrowUpRight } from "@phosphor-icons/react";
+import {
+  BoxDescriptions,
+  Container,
+  Experience,
+  HeaderTitle,
+  ImageBox,
+  Tags,
+} from "./style";
+import { ArrowUpRight,DeviceMobileSlash } from "@phosphor-icons/react";
 
+function Organizer({ text, link }) {
+ 
+  let y = text.split(link.name);
+  return <p>{y[0]} <a href={link.link} target="_blank">{link.name}</a>{y[1]}</p>
+ 
+  
+  
+}
 export function CardProjects({
   link,
   title,
@@ -13,7 +28,9 @@ export function CardProjects({
   imageCurse,
   nameCurse,
   imageCertificate,
+  links,
 }) {
+
   return (
     <Container>
       {projectsPage && <p>{created}</p>}
@@ -30,10 +47,11 @@ export function CardProjects({
             </span>
             {!projectsPage && <p>{created}</p>}
           </a>
-          <a href={github}>GIT HUB</a>
+          <p>oi</p>
+          <a href={github} target="_blank">GIT HUB</a>
         </HeaderTitle>
+        {links? <Organizer text={description} link={links} /> :  <p>{description}</p> }
 
-        <p>{description}</p>
         <Tags>
           {tags?.map((item, index) => (
             <p key={index}>{item}</p>
@@ -41,26 +59,6 @@ export function CardProjects({
         </Tags>
 
         {projectsPage && nameCurse && (
-          /*  <Experience>
-            <span>desenvolvido atravez dos conhecimentos do curso</span>
-            <div>
-              <span>
-                <img
-                  src=""
-                  alt=""
-                />{" "}
-                Rocketseat
-              </span>
-              {"⟶"}
-              <span>
-                <img
-                  src=""
-                  alt=""
-                />{" "}
-                certificado
-              </span>
-            </div>
-          </Experience> */
           <Experience>
             <span>desenvolvido atravez dos conhecimentos do curso</span>
             <div>

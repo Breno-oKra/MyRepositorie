@@ -6,6 +6,7 @@ export const Container = styled.div`
   align-items: start;
   border-bottom: 1px solid ${({ theme }) => theme.GRAY_100};
   padding-bottom: 10px;
+  backdrop-filter: blur(150px);
   > img {
     width: 60px;
     min-width: 60px;

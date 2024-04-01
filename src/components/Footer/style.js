@@ -13,6 +13,7 @@ export const Container = styled.div`
       color: var(--highlights);
       font-weight: bold;
     }
+   
   }
   @media (max-width: ${({ theme }) => theme.SMALL}) {
     padding-bottom: 80px;

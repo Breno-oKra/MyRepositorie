@@ -5,12 +5,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 200px;
+  width: 100%;
   height: 145px;
-  padding: 10px;
+
   gap: 5px;
-  backdrop-filter: blur(50px);
-  border-radius: 20px;
+
   a {
     width: 100%;
     padding-left: 15px;

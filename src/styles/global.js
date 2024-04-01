@@ -10,7 +10,8 @@ export default createGlobalStyle`
         --text: #fff;
         --subtitle:#dee2e6;
         --description:#adb5bd;
-      
+        --card_background: ${({ theme }) => theme.BLUE_300_OP};
+        --card_border:${({ theme }) => theme.WHITE_OP};
         --info:#00f5d4;
         --info_op:#00f5d4a8;
 
@@ -26,6 +27,8 @@ export default createGlobalStyle`
         --text:#001845;
         --subtitle:#023E7D;
         --description:#024FA2;
+        --card_background:#CCCCCC33;
+        --card_border:#00000033;
         --GRADIENTS-BAckground:  ${({ theme }) => theme.GRADIENTS_200_COLOR};
         --GRADIENTS: ${({ theme }) => theme.GRADIENTS_200};
         --links:#C05CFF;

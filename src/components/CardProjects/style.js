@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
 
-  
-  backdrop-filter: blur(50px);
+  background-color: var(--card_background);
+
+  border: 1px solid var(--card_border);
   gap: 10px;
 
   padding: 20px;
@@ -44,7 +45,6 @@ export const Container = styled.div`
   }
 `;
 export const HeaderTitle = styled.div`
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -150,6 +150,12 @@ export const BoxDescriptions = styled.div`
     > p {
       color: var(--description);
       font-size: 14px;
+      a{
+        padding-inline: 5px;
+        color: var(--links);
+        
+        text-decoration: underline;
+      }
     }
 
     @media (max-width: ${({ theme }) => theme.EXTRA_LARGE}) {
@@ -162,28 +168,27 @@ export const BoxDescriptions = styled.div`
         font-size: 12px;
       }
     }
-`
+`;
 export const ImageBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
-    &:hover {
-      img {
-        transform: translateY(-5px);
-      }
-      .out {
-        width: 85%;
-      }
+  &:hover {
+    img {
+      transform: translateY(-5px);
     }
-
     .out {
-      width: 90%;
-      height: 0px;
-      margin-bottom: 10px;
-      box-shadow: 0px 5px 18px 2px rgb(0, 0, 0);
-      transition: 300ms all linear;
+      width: 85%;
     }
+  }
+
+  .out {
+    width: 90%;
+    height: 0px;
+    margin-bottom: 10px;
+    box-shadow: 0px 5px 18px 2px rgb(0, 0, 0);
+    transition: 300ms all linear;
+  }
 `;

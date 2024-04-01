@@ -6,7 +6,7 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 20px;
   > div {
-    backdrop-filter: blur(50px);
+
   border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -32,6 +32,7 @@ export const Container = styled.div`
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
+
     }
     @media (max-width: ${({ theme }) => theme.EXTRA_LARGE}) {
       gap: 20px;

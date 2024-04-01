@@ -3,30 +3,37 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   min-height: 100vh;
-  
-  .cursor{
-    width: 30px;
-    height: 30px;
+
+  .cursor {
+    width: 100px;
+    height: 100px;
     display: block;
     border-radius: 50%;
     position: absolute;
-    background-color:rgba(2, 62, 125, 1)  ;
-    border: 3px solid rgba(0, 24, 69,0.3) ;
-    transition: all 100ms ease-out ;
+    bottom: 0;
+    left: -50px;
+    background: #ffffffB3;
+    transition: all 100ms ease-out;
     z-index: 0;
-    box-shadow: 0px 10px 255px 50px #0DE4F094;
+    box-shadow: 0px 0px 255px 100px #ffffffB3;
+    background-color: red;
   }
-  .cursorview{
+  .cursor:{
+    animation: go-back 2s;
+  }
+  .cursorview {
     visibility: hidden;
     display: none;
   }
+ 
+
   /* background-color: #001845; */
 `;
 export const SubContainer = styled.div`
   display: flex;
   width: 100%;
   padding-inline: 250px;
-  z-index: 5;
+ 
   @media (max-width: ${({ theme }) => theme.EXTRA_LARGE}) {
     padding-inline: 100px;
   }
@@ -36,7 +43,7 @@ export const SubContainer = styled.div`
     align-items: center;
     padding-inline: 20px;
   }
-/*   @media (max-width: ${({ theme }) => theme.MEDIUM}) {
+  /*   @media (max-width: ${({ theme }) => theme.MEDIUM}) {
     flex-direction: column;
     align-items: center;
     padding-inline: 20px;
@@ -45,9 +52,8 @@ export const SubContainer = styled.div`
     overflow: hidden;
     padding-inline: 5px;
   }
-  @media (max-height: 425px) and (min-width:${({theme}) => theme.LARGE}) {
-   gap: 30px;
-
+  @media (max-height: 425px) and (min-width: ${({ theme }) => theme.LARGE}) {
+    gap: 30px;
   }
 `;
 export const ContainerUser = styled.div`
@@ -55,7 +61,7 @@ export const ContainerUser = styled.div`
   top: 0px;
   width: 50%;
   height: 90vh;
-  padding: 10px;
+
   display: flex;
   padding-top: 150px;
 
@@ -80,7 +86,7 @@ export const ContainerUser = styled.div`
     padding-inline: 0px;
     height: auto;
   }
-  @media (max-height: 425px) and (min-width:${({theme}) => theme.LARGE}) {
+  @media (max-height: 425px) and (min-width: ${({ theme }) => theme.LARGE}) {
     height: 100vh;
     padding-top: 10px;
     overflow-y: auto;
@@ -88,11 +94,10 @@ export const ContainerUser = styled.div`
   }
 `;
 
-
 export const Boxs = styled.div`
   width: 50%;
   min-height: 100vh;
-  z-index: 5;
+
   display: flex;
   flex-direction: column;
   gap: 15vh;
@@ -101,9 +106,13 @@ export const Boxs = styled.div`
     padding-top: 80px;
     width: 60%;
   }
+
   @media (max-width: ${({ theme }) => theme.LARGE}) {
     width: 100%;
     padding-left: 110px;
+  }
+  @media (min-width: ${({ theme }) => theme.MEDIUM_LG}) and (max-width: ${({theme}) => theme.LARGE}) {
+    padding-inline: 140px;
   }
   @media (max-width: 650px) {
     padding-inline: 10px;
@@ -119,11 +128,7 @@ export const Boxs = styled.div`
 `;
 export const AboutMe = styled.div`
   width: 100%;
-  padding: 5px;
   padding-top: 150px;
-  backdrop-filter: blur(50px);
-  border-radius: 20px;
-  
   h2 {
     font-size: 46px;
     margin: 20px 0;
@@ -133,7 +138,7 @@ export const AboutMe = styled.div`
     }
   }
   p {
-    color:var(--subtitle);
+    color: var(--subtitle);
     font-size: 18px;
     letter-spacing: 2px;
   }
@@ -167,7 +172,7 @@ export const Certificates = styled.div`
   > h3 {
     font-family: "League Spartan", sans-serif;
     font-size: 20px;
-
+  
     font-weight: 200;
   }
 `;
@@ -181,6 +186,7 @@ export const Skills = styled.div`
     font-size: 20px;
 
     font-weight: 200;
+    
   }
   > div {
     padding: 50px 0;
@@ -190,29 +196,38 @@ export const Skills = styled.div`
     width: 100%;
 
     div {
-      padding: 20px;
-      background-color:  ${({theme}) => theme.BLUE_200};
-      border-radius: 20px;
+      width: 200px;
+      padding: 10px;
+      background-color:var(--card_background);
+      border-radius: 5px;
       box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-      border: 2px solid  ${({theme}) => theme.GRAY_300};
+      border: 2px solid var(--card_border);
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 10px;
       img {
-        width: 70px;
-        height: 70px;
+        width: 40px;
+        height: 40px;
         object-fit: cover;
+      }
+      p{
+        font-weight: bold;
+        font-family: "League Spartan", sans-serif;
+       
       }
     }
     @media (max-width: ${({ theme }) => theme.LARGE}) {
       justify-content: center;
     }
     @media (max-width: ${({ theme }) => theme.SMALL}) {
-      gap: 10px;
+      
+      gap: 20px;
       padding: 10px;
       justify-content: center;
-      div {
-        img {
-          width: 40px;
-          height: 40px;
-        }
+      div{
+        width: 150px;
+        
       }
     }
     @media (max-width: ${({ theme }) => theme.EXTRA_SMALL}) {
@@ -228,8 +243,8 @@ export const Skills = styled.div`
     }
   }
   @media (max-width: ${({ theme }) => theme.EXTRA_SMALL}) {
-      h3{
-        font-size: 14px;
-      }
+    h3 {
+      font-size: 14px;
     }
+  }
 `;

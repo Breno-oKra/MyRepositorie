@@ -1,6 +1,7 @@
 export const LIGHT_THEME =  {
 
     WHITE: "#fff",
+    WHITE_OP:"#ffffff1a",
     WHITE_100:"#dee2e6",
     WHITE_200:"#adb5bd",
     GRAY_100:" #40598c68",
@@ -12,6 +13,7 @@ export const LIGHT_THEME =  {
     BLUE_100: "#00f5d4a8",
     BLUE_200:"#002855", //card skills
     BLUE_200_OP:" #00285542",
+    BLUE_300_OP:"#001D5233",
     PURPLE_100: "#deaaff",
     PURPLE_200: "#9b5de5",
     GRADIENTS_100_COLOR:"rgb(0, 24, 69)",

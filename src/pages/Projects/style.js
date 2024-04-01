@@ -61,34 +61,3 @@ export const ContainerUser = styled.div`
   }
 `;
 
-export const Boxs = styled.div`
-  position: relative;
-  width: 70%;
-  min-height: 100vh;
-  flex-direction: column;
-  display: flex;
-  margin-bottom: 100px;
-  >a {
-    font-weight: bold;
-    font-size: 18px;
-  }
-
-  padding-top: 100px;
-  @media (max-width: 1600px) {
-    padding-top: 80px;
-  }
-  @media (max-width: 1150px) {
-    width: 100%;
-  }
-  @media (max-width: 650px) {
-    padding-inline: 10px;
-  }
-  @media (max-width: 550px) {
-    gap: 10vh;
-  }
-  @media (max-width: 210px) {
-    gap: 20px;
-    padding-top: 0px;
-    padding-inline: 3px;
-  }
-`;

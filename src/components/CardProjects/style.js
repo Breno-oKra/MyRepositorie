@@ -48,6 +48,8 @@ export const HeaderTitle = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
   > div {
     display: flex;
     gap: 10px;
@@ -93,6 +95,7 @@ export const HeaderTitle = styled.div`
     }
   }
   a:nth-child(2) {
+    width: 50px;
     font-size: 12px;
     text-align: center;
   }
@@ -206,7 +209,7 @@ export const ImageBox = styled.div`
   }
 
   .out {
-    width: 90%;
+    width: 70%;
     height: 0px;
     margin-bottom: 10px;
     box-shadow: 0px 5px 18px 2px rgb(0, 0, 0);

@@ -21,7 +21,7 @@ export const Container = styled.div`
       padding-top: 15px;
       align-items: center;
       padding-right: 40px;
-      img {
+      > img {
         width: 70%;
       }
     }
@@ -149,11 +149,15 @@ export const BoxSunMoon = styled.div`
   height: 20px;
   border-radius: 40px;
   background-color: gray;
+
   align-items: center;
   justify-content: start;
   button {
     width: 60%;
     height: 150%;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 100%;
     img {
       width: 100%;
     }
@@ -168,6 +172,7 @@ export const BoxSunMoon = styled.div`
     }
     button {
       background-color: ${({ theme }) => theme.BLUE_200};
+
       transform: translateX(20px);
     }
   }
@@ -176,11 +181,6 @@ export const BoxSunMoon = styled.div`
     display: none;
   }
 
-  .bt-moon {
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 100%;
-  }
   @media (max-width: ${({ theme }) => theme.EXTRA_SMALL}) {
     width: 30px;
     height: 15px;

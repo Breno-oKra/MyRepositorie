@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Project } from "../pages/Projects";
 import { Home } from "../pages/home";
 
@@ -8,6 +8,7 @@ export function Routers(){
             <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="/projects" element={<Project/>} />
+                <Route path="*" exact={true} element={<Navigate to="/" />} />
             </Routes>
         </BrowserRouter>
     )

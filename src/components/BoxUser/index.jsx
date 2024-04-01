@@ -56,13 +56,20 @@ export function BoxUser({ profileProject }) {
 
         <BoxSunMoon id="box" className="box-sun">
           <button
-            id="btn"
             type="button"
             onClick={() => {
-              document.querySelector("#box").classList.toggle("boxSun");
-              document.documentElement.classList.toggle("light");
+              const mode = localStorage.getItem("@Breno-okra");
+
+              if (JSON.parse(mode)) {
+                localStorage.setItem("@Breno-okra", JSON.stringify(false));
+                document.querySelector("#box").classList.toggle("boxSun");
+                document.documentElement.classList.toggle("light");
+              } else {
+                localStorage.setItem("@Breno-okra", JSON.stringify(true));
+                document.querySelector("#box").classList.toggle("boxSun");
+                document.documentElement.classList.toggle("light");
+              }
             }}
-            className="bt-moon"
           >
             <img className="moon" src={Moon} alt="" />
             <img className="sun" src={Sun} alt="" />

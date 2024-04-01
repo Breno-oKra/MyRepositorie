@@ -7,9 +7,9 @@ export default createGlobalStyle`
         box-sizing: border-box;    
     }
     :root{
-        --text: #fff;
-        --subtitle:#dee2e6;
-        --description:#adb5bd;
+        --text: ${({ theme }) => theme.WHITE};
+        --subtitle:${({ theme }) => theme.WHITE_100};
+        --description:${({ theme }) => theme.WHITE_200};
         --card_background: ${({ theme }) => theme.BLUE_300_OP};
         --card_border:${({ theme }) => theme.WHITE_OP};
         --info:#00f5d4;
@@ -22,6 +22,8 @@ export default createGlobalStyle`
         --highlights: #9b5de5;
         --GRADIENTS-BAckground:  ${({ theme }) => theme.GRADIENTS_100_COLOR};
         --GRADIENTS: ${({ theme }) => theme.GRADIENTS_100};
+        --background-scroll:${({ theme }) => theme.DARK_BLUE};
+        --background-scroll-line: ${({ theme }) => theme.PURPLE_200};
     }
     html{
         scroll-behavior: smooth;
@@ -42,25 +44,29 @@ export default createGlobalStyle`
         --background-mobile: #F2A27D80;
         --text-mobile-active: #007A6A;
         --background-mobile-active: #00E0C280;
+
+        --background-scroll:#B2BDBD;
+
     }
     body{
         color: var(--text);
         background: var(--GRADIENTS-BAckground);
         background:var(--GRADIENTS);
         background-repeat: no-repeat;  
-        
+       
         overflow-x: hidden;
+  
     }
     body::-webkit-scrollbar {
             width: 12px; 
         }
 
         body::-webkit-scrollbar-track {
-            background: #001845;
+            background:var(--background-scroll);
         }
 
         body::-webkit-scrollbar-thumb {
-            background-color:  #a663cc; 
+            background-color: var(--background-scroll-line); 
            
            
         }

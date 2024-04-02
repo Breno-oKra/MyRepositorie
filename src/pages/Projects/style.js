@@ -35,7 +35,6 @@ export const ContainerUser = styled.div`
   gap: 10px;
   @media (max-width: 1600px) {
     padding-top: 80px;
-    align-items: center;
     justify-content: center;
 
   }

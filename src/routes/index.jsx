@@ -8,7 +8,7 @@ export function Routers(){
             <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="/projects" element={<Project/>} />
-                <Route path="*" exact={true} element={<Navigate to="/" />} />
+                <Route path="*" element={<Navigate to="/" />} />
             </Routes>
         </BrowserRouter>
     )

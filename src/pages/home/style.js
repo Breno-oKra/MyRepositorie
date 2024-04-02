@@ -45,7 +45,6 @@ export const ContainerUser = styled.div`
   @media (max-width: ${({ theme }) => theme.EXTRA_LARGE}) {
     padding-top: 80px;
     
-    align-items: center;
     justify-content: center;
   }
   @media (max-width: ${({ theme }) => theme.LARGE}) {

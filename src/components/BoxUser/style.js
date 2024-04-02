@@ -22,70 +22,43 @@ export const Container = styled.div`
       align-items: center;
       padding-right: 40px;
       > img {
-        width: 70%;
+        width: 80%;
       }
     }
 
     @media (max-width: ${({ theme }) => theme.EXTRA_LARGE}) {
       gap: 20px;
       img {
-        width: 100%;
+        width: 70%;
       }
     }
     @media (max-width: ${({ theme }) => theme.LARGE}) {
-      img {
-        width: 50%;
-      }
       &.profileProject {
         padding-right: 0px;
-        img {
-          width: 60%;
-        }
+      
       }
     }
 
     @media (max-width: ${({ theme }) => theme.SMALL}) {
       img {
-        width: 70%;
+        width: 100%;
       }
       &.profileProject {
         img {
-          width: 90%;
+          width: 100%;
         }
       }
     }
 
-    @media (max-height: 500px) and (max-width: ${({ theme }) => theme.LARGE}) {
-      gap: 10px;
-      img {
-        width: 30%;
-      }
-    }
-    @media (max-height: 400px) and (max-width: 950px) {
-      gap: 10px;
-      img {
-        width: 20%;
-      }
-    }
-    @media (max-height: 300px) {
-      gap: 5px;
-    }
-    @media (max-width: ${({ theme }) => theme.EXTRA_SMALL}) {
-      padding-top: 10px;
-      img {
-        width: 50%;
-      }
-    }
   }
   @media (max-width: ${({ theme }) => theme.LARGE}) {
     width: 100%;
-    height: 100%;
+
     align-items: center;
     justify-content: center;
   }
   @media (max-height: ${({ theme }) => theme.EXTRA_SMALL}) {
     padding-top: 10px;
-    height: auto;
   }
 `;
 export const Infos = styled.div`

@@ -24,6 +24,7 @@ export default createGlobalStyle`
         --GRADIENTS: ${({ theme }) => theme.GRADIENTS_100};
         --background-scroll:${({ theme }) => theme.DARK_BLUE};
         --background-scroll-line: ${({ theme }) => theme.PURPLE_200};
+        --background_navigation: ${({ theme }) => theme.BLUE_200}
     }
     html{
         scroll-behavior: smooth;
@@ -46,6 +47,7 @@ export default createGlobalStyle`
         --background-mobile-active: #00E0C280;
 
         --background-scroll:#B2BDBD;
+        --background_navigation:${({ theme }) => theme.GRADIENTS_200_COLOR}
 
     }
     body{

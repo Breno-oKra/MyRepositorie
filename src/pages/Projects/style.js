@@ -35,22 +35,26 @@ export const ContainerUser = styled.div`
   gap: 10px;
   @media (max-width: 1600px) {
     padding-top: 80px;
+    align-items: center;
+    justify-content: center;
+
   }
   @media (max-width: 1150px) {
     width: 100%;
     position: relative;
-    height: auto;
+    height: 100vh;
     flex-direction: column;
     padding-top: 0;
-  }
-  @media (max-width: 650px) {
-    padding-inline: 20px;
   }
   @media (max-width: 210px) {
     overflow: hidden;
     padding-inline: 0px;
   }
-  @media (max-height: 425px) and (min-width:${({theme}) => theme.LARGE}) {
+  @media (max-height: 575px) {
+    height: auto;
+    padding-top: 10px;
+  }
+  @media (max-height: 575px) and (min-width:${({theme}) => theme.LARGE}) {
     height: 100vh;
     padding-top: 10px;
     overflow-y: scroll;

@@ -67,9 +67,9 @@ export const Container = styled.div`
     padding-inline: 30px;
     padding-top: 10px;
     align-items: end;
-    background-color: ${({ theme }) => theme. BLUE_200_OP};
-    backdrop-filter: blur(40px);
-
+    background-color:var(--background_navigation);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     a {
       border-left: none;
       border-bottom: 2px solid  var(--links);

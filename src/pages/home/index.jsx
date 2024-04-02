@@ -162,7 +162,7 @@ export function Home() {
       image: "https://www.drupal.org/files/project-images/screenshot_361.png",
     },
     {
-      name: "Jquary",
+      name: "Jquery",
       image: "https://avatars.githubusercontent.com/u/70142?s=280&v=4",
     },
     {

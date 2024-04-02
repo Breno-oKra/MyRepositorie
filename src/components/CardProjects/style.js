@@ -8,10 +8,10 @@ export const Container = styled.div`
   border: 1px solid var(--card_border);
   gap: 10px;
 
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   img {
-    width: 200px;
+    width: 250px;
     transition: 400ms transform linear;
   }
 

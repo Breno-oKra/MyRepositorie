@@ -19,11 +19,11 @@ export function BoxUser({ profileProject }) {
         <Infos>
           <p>
             {" "}
-            <MapPin weight="fill" /> Brasilia-DF
+            <MapPin  /> Brasilia-DF
           </p>
           <p>
             {" "}
-            <User weight="fill" /> Breno 22 anos
+            <User  /> Breno 22 anos
           </p>
         </Infos>
         <BoxLinks>

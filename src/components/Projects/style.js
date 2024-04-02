@@ -31,7 +31,7 @@ export const Container = styled.div`
     }
   }
   &.isProject {
-    gap: 70px;
+    gap: 50px;
     > div {
       > img {
         width: 250px;

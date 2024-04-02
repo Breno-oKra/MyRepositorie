@@ -44,7 +44,9 @@ export const ContainerUser = styled.div`
   gap: 10px;
   @media (max-width: ${({ theme }) => theme.EXTRA_LARGE}) {
     padding-top: 80px;
-    width: 40%;
+    
+    align-items: center;
+    justify-content: center;
   }
   @media (max-width: ${({ theme }) => theme.LARGE}) {
     width: 100%;
@@ -54,20 +56,18 @@ export const ContainerUser = styled.div`
     padding-top: 0;
     /* padding-left: 110px; */
   }
-  @media (max-width: ${({ theme }) => theme.SMALL}) {
-    padding-inline: 20px;
-  }
-  @media (max-width: ${({ theme }) => theme.EXTRA_SMALL}) {
-    overflow: hidden;
-    padding-inline: 0px;
+  @media (max-height: 575px) {
     height: auto;
+    padding-top: 10px;
+
   }
-  @media (max-height: 425px) and (min-width: ${({ theme }) => theme.LARGE}) {
+  @media (max-height: 575px) and (min-width:${({theme}) => theme.LARGE}) {
     height: 100vh;
     padding-top: 10px;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow-y: scroll;
   }
+
+
 `;
 export const AboutMe = styled.div`
   width: 100%;

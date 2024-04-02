@@ -173,7 +173,7 @@ export function Project() {
           name:"Discovery02",
             link:"https://github.com/Breno-oKra/Maratona-02?tab=readme-ov-file",
         },
-        isMobile:false
+        isMobile:true
         
       },
       {
